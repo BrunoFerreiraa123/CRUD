@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Cadastro de funcionários</h1>
+            <button>Adicionar</button>
+        </header>
+
+        <section class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Salário</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="modal-container">
+            <div class="modal">
+                <form>
+                    <label for="modal-name"></label>
+                    <input id="modal-name" type="text"> 
+
+                    <label for="modal-cargo"></label>
+                    <input id="modal-cargo" type="text"> 
+
+                    <label for="modal-salario"></label>
+                    <input id="modal-salario" type="number"> 
+                    <button id="btnSalvar">Salvar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
