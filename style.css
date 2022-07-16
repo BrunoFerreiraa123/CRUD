@@ -89,3 +89,69 @@ tr {
   tbody tr td.acao {
     text-align: center;
   }
+
+section.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.modal {
+    padding:40px;
+    width: 50%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+form label {
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(110, 110, 110);
+    outline: none;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+form button {
+    width: 100%;
+    background-color: rgb(61, 108, 236);
+    color: #fff;
+    padding: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
