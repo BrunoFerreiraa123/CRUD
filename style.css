@@ -43,6 +43,7 @@ header button {
     color: #fff;
     border:none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 section.table {
@@ -91,13 +92,13 @@ tr {
   }
 
 section.modal-container {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 5;
-    display: none;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -135,10 +136,11 @@ form button {
     border: none;
     border-radius: 10px;
     margin: 10px auto;
+    cursor: pointer;
 }
 
 .active {
-    display: flex;
+    display: flex !important;
 }
 
 .active .modal {

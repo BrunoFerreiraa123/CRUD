@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'><script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <main class="container">
         <header>
             <h1>Cadastro de funcionários</h1>
-            <button>Adicionar</button>
+            <button onclick="openModal()" id="new">Adicionar</button>
         </header>
 
         <section class="table">
@@ -34,11 +34,11 @@
             </table>
         </section>
 
-        <section class="modal-container">
+        <section class="modal-container" id="modal-container">
             <div class="modal">
                 <form>
-                    <label for="modal-name">Nome</label>
-                    <input id="modal-name" type="text"> 
+                    <label for="modal-nome">Nome</label>
+                    <input id="modal-nome" type="text"> 
 
                     <label for="modal-cargo">Cargo</label>
                     <input id="modal-cargo" type="text"> 
