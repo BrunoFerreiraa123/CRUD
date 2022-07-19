@@ -57,6 +57,29 @@ function insertItem(item, index) {
     tbody.appendChild(tr)
 }
 
+btnSalvar.onclick = e => {
+
+    if (modalNome.value == '' || modalCargo.value == '' || modalSalario.value == '') {
+        return
+    }
+
+    e.preventDefault();
+
+    if (id !== undefined) {
+        itens[id].nome = modalNome.value
+        itens[id].funcao = modalCargo.value
+        itens[id].salario = modalSalario.value
+    } else {
+        itens.push({ 'nome': modalNome.value, 'funcao': modalCargo.value, 'salario': modalSalario.value })
+    }
+
+    setItensBD()
+
+    modal.classList.remove('active')
+    loadItens()
+    id = undefined
+}
+
 function loadItens() {
     itens = getItensBD()
     tbody.innerHTML = ''
